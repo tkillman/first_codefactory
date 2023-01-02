@@ -1,3 +1,9 @@
+# 개발팁
+
+1. wrap 옵션  
+   vscode에서 마우스 오른쪽 refactor를 클릭하면 wrap 옵션을 사용할 수 있다.  
+   wrap with column의 경우 단축키 ctrl + . 을 하면 나온다.
+
 # 설치방법
 
 1. flutter 설치

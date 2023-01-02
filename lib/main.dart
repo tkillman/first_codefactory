@@ -1,22 +1,25 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(home: HomeScreen()));
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: HomeScreen(),
+  ));
 }
 
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
-      body: Center(
-        child: Text(
-          'Hello world!!',
-          style: TextStyle(
+      backgroundColor: Color(0xFFF99231),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset('asset/img/logo.jpg'),
+          CircularProgressIndicator(
             color: Colors.white,
-            fontSize: 20.0,
           ),
-        ),
+        ],
       ),
     );
   }
