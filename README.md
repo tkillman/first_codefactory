@@ -30,4 +30,7 @@ git 명령어 : git clone https://github.com/flutter/flutter.git -b stable
 
 1. Flutter Hello world
    hello world를 앱 중앙에 배치시켜보기
-   MaterialApp > home > Scaffold
+   MaterialApp > Scaffold > Center > Text
+
+2. Widget Tree  
+   widget이란 화면에 나타나는 것
