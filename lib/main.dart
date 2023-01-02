@@ -1,3 +1,5 @@
+import 'package:first_codefactory/screen/home_screen.dart';
+import 'package:first_codefactory/screen/home_screen2.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -5,22 +7,4 @@ void main() {
     debugShowCheckedModeBanner: false,
     home: HomeScreen(),
   ));
-}
-
-class HomeScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color(0xFFF99231),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset('asset/img/logo.jpg'),
-          CircularProgressIndicator(
-            color: Colors.white,
-          ),
-        ],
-      ),
-    );
-  }
 }

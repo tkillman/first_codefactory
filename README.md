@@ -4,6 +4,8 @@
    vscode에서 마우스 오른쪽 refactor를 클릭하면 wrap 옵션을 사용할 수 있다.  
    wrap with column의 경우 단축키 ctrl + . 을 하면 나온다.
 
+2. stless를 입력하면 StatelessWidget이 자동완성된다.
+
 # 설치방법
 
 1. flutter 설치
@@ -48,3 +50,7 @@ git 명령어 : git clone https://github.com/flutter/flutter.git -b stable
     a. pubspec.yaml에 assets 설정하기
     b. assets 설정 후 pub get을 해줘야 한다.
     ```
+
+4. row and column  
+   SafeArea는 로딩바와 홈버튼 안쪽으로 들어오게 해준다.
+   MainAxisAlignment 사용해보기
