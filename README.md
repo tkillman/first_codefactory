@@ -34,3 +34,11 @@ git 명령어 : git clone https://github.com/flutter/flutter.git -b stable
 
 2. Widget Tree  
    widget이란 화면에 나타나는 것
+
+3. Splash Screen 제작하기  
+   첫 로딩 화면 만들기
+
+    ```
+    a. pubspec.yaml에 assets 설정하기
+    b. assets 설정 후 pub get을 해줘야 한다.
+    ```
