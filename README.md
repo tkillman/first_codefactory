@@ -62,3 +62,12 @@ git 명령어 : git clone https://github.com/flutter/flutter.git -b stable
     ```
 
     mainAxisSize 사용해보기
+
+    Expanded와 Flexible 사용해보기
+
+    ```
+    Expanded와 Flexible은 반드시 children 안에서 사용해야한다.
+
+    Expanded -- 남는 공간 최대한 가져감 (flex는 남는 공간 비율)
+    Flexible -- 남는 공간 버려짐
+    ```
