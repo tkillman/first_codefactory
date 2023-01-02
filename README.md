@@ -25,3 +25,9 @@ git 명령어 : git clone https://github.com/flutter/flutter.git -b stable
 7. ctrl + shift + p 로 flutter:new_project로 프로젝트 실행
 
 8. run을 통해 앱 실행
+
+# 강의정리
+
+1. Flutter Hello world
+   hello world를 앱 중앙에 배치시켜보기
+   MaterialApp > home > Scaffold
