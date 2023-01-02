@@ -9,6 +9,8 @@ class HomeScreen extends StatelessWidget {
       body: SafeArea(
         child: Container(
           color: Colors.black,
+          width: MediaQuery.of(context).size.width,
+          //height: MediaQuery.of(context).size.height,
           child: Column(
             //start -- 시작
             //end -- 끝
@@ -17,6 +19,8 @@ class HomeScreen extends StatelessWidget {
             //spaceEvenly -- 위젯 사이 동일, 끝이 비어있음.
             //spaceAround -- 위젯 사이 동일, 끝이 1/2
             mainAxisAlignment: MainAxisAlignment.center,
+            // crossAxisAlignment -- 반대축 정렬
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                 color: Colors.red,

@@ -51,6 +51,11 @@ git 명령어 : git clone https://github.com/flutter/flutter.git -b stable
     b. assets 설정 후 pub get을 해줘야 한다.
     ```
 
-4. row and column  
-   SafeArea는 로딩바와 홈버튼 안쪽으로 들어오게 해준다.
-   MainAxisAlignment 사용해보기
+4. row and column (layout)  
+   SafeArea는 로딩바와 홈버튼 안쪽으로 들어오게 해준다.  
+   MainAxisAlignment 사용해보기  
+   crossAxisAlignment 사용해보기
+    ```
+    crossAxisAlignment의 경우 반대축이기 때문에
+    Column widget의 경우 width를 최대(MediaQuery.of(context).size.width)로 잡아줘야 하고 Row widget의 경우 height를 최대로 잡아줘야 한다.
+    ```
