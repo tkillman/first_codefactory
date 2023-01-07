@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Meeting extends StatelessWidget {
@@ -80,7 +81,24 @@ class _Toppart extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  showCupertinoDialog(
+                    context: context,
+                    barrierDismissible: true,
+                    builder: (BuildContext buildContext) {
+                      return Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Container(
+                          color: Colors.white,
+                          height: 300.0,
+                          child: CupertinoDatePicker(
+                              mode: CupertinoDatePickerMode.date,
+                              onDateTimeChanged: (DateTime datetime) {}),
+                        ),
+                      );
+                    },
+                  );
+                },
                 iconSize: 60.0,
                 icon: Icon(
                   Icons.favorite,
