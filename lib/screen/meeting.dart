@@ -29,10 +29,19 @@ class Meeting extends StatelessWidget {
   }
 }
 
-class _Toppart extends StatelessWidget {
+class _Toppart extends StatefulWidget {
   const _Toppart({
     super.key,
   });
+
+  @override
+  State<_Toppart> createState() => _ToppartState();
+}
+
+class _ToppartState extends State<_Toppart> {
+  final now = DateTime.now();
+
+  DateTime pickedDateTime = DateTime.now();
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +75,7 @@ class _Toppart extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "2023.01.07",
+                  '${pickedDateTime.year}.${pickedDateTime.month}.${pickedDateTime.day}',
                   style: TextStyle(
                     color: Colors.white,
                     fontFamily: 'sunflower',
@@ -93,7 +102,15 @@ class _Toppart extends StatelessWidget {
                           height: 300.0,
                           child: CupertinoDatePicker(
                               mode: CupertinoDatePickerMode.date,
-                              onDateTimeChanged: (DateTime datetime) {}),
+                              initialDateTime: pickedDateTime,
+                              maximumDate:
+                                  DateTime(now.year, now.month, now.day),
+                              onDateTimeChanged: (DateTime datetime) {
+                                setState(() {
+                                  // 선택 날짜
+                                  pickedDateTime = datetime;
+                                });
+                              }),
                         ),
                       );
                     },
@@ -110,7 +127,7 @@ class _Toppart extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "D+1",
+              'D +${DateTime(now.year, now.month, now.day).difference(pickedDateTime).inDays + 1}',
               style: TextStyle(
                 color: Colors.white,
                 fontFamily: 'sunflower',
