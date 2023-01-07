@@ -77,6 +77,7 @@ git 명령어 : git clone https://github.com/flutter/flutter.git -b stable
 # 강의기반 목차
 
 -   ## [프로젝트] 블로그 웹앱
+
     -   [프로젝트에 패키지 추가하기]
         ```
         pubdev : 공식 패키지
@@ -86,3 +87,16 @@ git 명령어 : git clone https://github.com/flutter/flutter.git -b stable
     -   [WebView 사용해보기]
     -   [controller 사용해보기]
     -   [Android와 ios에서 http 프로토콜을 사용하는법]
+
+-   ## [이론] StatefulWidget
+
+    -   StatefulWidget 선언하기
+        ```stful 자동완성
+           StatelessWidget 만들고 변환시킬 수 있다.
+        ```
+    -   Life Cycle 확인하기
+        ![생명주기](https://user-images.githubusercontent.com/23464811/211132656-c37c1271-da10-4f27-ba48-4e599fb7c274.JPG)
+        ![파라미터가 바뀔때](https://user-images.githubusercontent.com/23464811/211132663-fa485f19-53c8-45b2-be68-1c860b55f5f9.JPG)
+        ![setstate할때](https://user-images.githubusercontent.com/23464811/211132668-2a86c776-e302-42f8-8062-e33d9f0b847f.JPG)
+
+    statelessWidget은 build 함수 한번 실행

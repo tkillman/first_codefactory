@@ -9,13 +9,16 @@ import 'package:first_codefactory/screen/home_screen2.dart';
 // layout
 import 'package:first_codefactory/screen/home_screen3.dart';
 
-// layout
+// webView
 import 'package:first_codefactory/screen/webViewScreen.dart';
+
+// lifyCycle
+import 'package:first_codefactory/screen/lifeCycle.dart';
 
 // WebView
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: WebViewScreen(),
+    home: LifeCycle(),
   ));
 }
