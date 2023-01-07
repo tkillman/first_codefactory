@@ -15,10 +15,12 @@ import 'package:first_codefactory/screen/webViewScreen.dart';
 // lifyCycle
 import 'package:first_codefactory/screen/lifeCycle.dart';
 
-// WebView
+// 전자액자 pageView
+import 'package:first_codefactory/screen/pageViewTest.dart';
+
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: LifeCycle(),
+    home: PageViewTest(),
   ));
 }
