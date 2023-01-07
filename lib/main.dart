@@ -18,9 +18,12 @@ import 'package:first_codefactory/screen/lifeCycle.dart';
 // 전자액자 pageView
 import 'package:first_codefactory/screen/pageViewTest.dart';
 
+// 만난지 ui
+import 'package:first_codefactory/screen/meeting.dart';
+
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: PageViewTest(),
+    home: Meeting(),
   ));
 }

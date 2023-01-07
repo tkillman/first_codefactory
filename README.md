@@ -101,6 +101,9 @@ git 명령어 : git clone https://github.com/flutter/flutter.git -b stable
 
     statelessWidget은 build 함수 한번 실행
 
-# [프로젝트] [★★☆☆☆] 전자액자
+-   ## [프로젝트] [★★☆☆☆] 전자액자
 
--   ## PageView 위젯 사용해보기
+    -   ### PageView 위젯 사용해보기
+
+-   ## [프로젝트] [★★☆☆☆] 만난지 며칠 U&I
+    -   ### TextStyle 설정하기
