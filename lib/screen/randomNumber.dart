@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 import '../const/color.dart';
@@ -10,6 +12,8 @@ class RandomNumber extends StatefulWidget {
 }
 
 class _RandomNumberState extends State<RandomNumber> {
+  List<int> randomNumbers = [123, 456, 789];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +46,7 @@ class _RandomNumberState extends State<RandomNumber> {
               Expanded(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [123, 456, 789]
+                  children: randomNumbers
                       .asMap()
                       .entries
                       .map(
@@ -73,7 +77,19 @@ class _RandomNumberState extends State<RandomNumber> {
                   style: ElevatedButton.styleFrom(
                     primary: RED_COLOR,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    final r = Random();
+                    Set<int> newRandomNumbers = {};
+
+                    while (newRandomNumbers != 3) {
+                      final newNumber = r.nextInt(1000);
+                      newRandomNumbers.add(newNumber);
+                    }
+
+                    setState(() {
+                      randomNumbers = newRandomNumbers.toList();
+                    });
+                  },
                   child: Text("button"),
                 ),
               ),
