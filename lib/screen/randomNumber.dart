@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:first_codefactory/screen/setting_screen.dart';
 import 'package:flutter/material.dart';
 
+import '../component/numberRow.dart';
 import '../const/color.dart';
 
 class RandomNumber extends StatefulWidget {
@@ -46,7 +47,9 @@ class _RandomNumberState extends State<RandomNumber> {
     final result = await Navigator.of(context).push<int>(
       MaterialPageRoute(
         builder: (BuildContext context) {
-          return SettingScreen();
+          return SettingScreen(
+            maxNumber: maxNumber,
+          );
         },
       ),
     );
@@ -119,19 +122,7 @@ class _Body extends StatelessWidget {
             .map(
               (e) => Padding(
                 padding: EdgeInsets.only(bottom: e.key == 2 ? 0 : 16.0),
-                child: Row(
-                  children: e.value
-                      .toString()
-                      .split('')
-                      .map(
-                        (y) => Image.asset(
-                          'asset/img/randomNumber/$y.png',
-                          width: 50.0,
-                          height: 50.0,
-                        ),
-                      )
-                      .toList(),
-                ),
+                child: NumberRow(number: e.value),
               ),
             )
             .toList(),
