@@ -1,3 +1,4 @@
+import 'package:first_codefactory/screen/constConstructor.dart';
 import 'package:flutter/material.dart';
 
 // StatelessWidget 기초
@@ -20,6 +21,8 @@ import 'package:first_codefactory/screen/pageViewTest.dart';
 
 // 만난지 ui
 import 'package:first_codefactory/screen/meeting.dart';
+
+// const contstructor 사용
 
 void main() {
   runApp(
@@ -48,7 +51,7 @@ void main() {
           ),
         ),
       ),
-      home: Meeting(),
+      home: ConstConstructor(),
     ),
   );
 }
