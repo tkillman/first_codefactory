@@ -43,19 +43,25 @@ class _RandomNumberState extends State<RandomNumber> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [123, 456, 789]
+                      .asMap()
+                      .entries
                       .map(
-                        (e) => Row(
-                          children: e
-                              .toString()
-                              .split('')
-                              .map(
-                                (y) => Image.asset(
-                                  'asset/img/randomNumber/$y.png',
-                                  width: 50.0,
-                                  height: 50.0,
-                                ),
-                              )
-                              .toList(),
+                        (e) => Padding(
+                          padding:
+                              EdgeInsets.only(bottom: e.key == 2 ? 0 : 16.0),
+                          child: Row(
+                            children: e.value
+                                .toString()
+                                .split('')
+                                .map(
+                                  (y) => Image.asset(
+                                    'asset/img/randomNumber/$y.png',
+                                    width: 50.0,
+                                    height: 50.0,
+                                  ),
+                                )
+                                .toList(),
+                          ),
                         ),
                       )
                       .toList(),
