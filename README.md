@@ -110,7 +110,10 @@ git 명령어 : git clone https://github.com/flutter/flutter.git -b stable
     -   ### TextStyle 설정하기
 
 -   ## [이론] Const Constructor
+
     ```
     const 생성자를 사용하는경우 setState를 했을 때
     build를 재실행하지 않아 메모리를 아끼는 장점이 있다.
     ```
+
+-   ## [프로젝트] [★★☆☆☆] 쓸데없이 이쁜 랜덤숫자 생성기

@@ -1,4 +1,3 @@
-import 'package:first_codefactory/screen/constConstructor.dart';
 import 'package:flutter/material.dart';
 
 // StatelessWidget 기초
@@ -23,6 +22,10 @@ import 'package:first_codefactory/screen/pageViewTest.dart';
 import 'package:first_codefactory/screen/meeting.dart';
 
 // const contstructor 사용
+import 'package:first_codefactory/screen/constConstructor.dart';
+
+// 랜덤숫자 생성기
+import 'package:first_codefactory/screen/randomNumber.dart';
 
 void main() {
   runApp(
@@ -51,7 +54,7 @@ void main() {
           ),
         ),
       ),
-      home: ConstConstructor(),
+      home: RandomNumber(),
     ),
   );
 }
