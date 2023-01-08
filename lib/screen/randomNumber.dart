@@ -13,6 +13,7 @@ class RandomNumber extends StatefulWidget {
 }
 
 class _RandomNumberState extends State<RandomNumber> {
+  int maxNumber = 1000;
   List<int> randomNumbers = [123, 456, 789];
 
   @override
@@ -27,7 +28,9 @@ class _RandomNumberState extends State<RandomNumber> {
           ),
           child: Column(
             children: [
-              const _Header(),
+              _Header(
+                onPressed: onSettingButtonClick,
+              ),
               _Body(randomNumbers: randomNumbers),
               _Footer(
                 onPressed: onCreateRandomNumbers,
@@ -39,12 +42,30 @@ class _RandomNumberState extends State<RandomNumber> {
     );
   }
 
+  void onSettingButtonClick() async {
+    final result = await Navigator.of(context).push<int>(
+      MaterialPageRoute(
+        builder: (BuildContext context) {
+          return SettingScreen();
+        },
+      ),
+    );
+
+    print("result" + result.toString());
+
+    if (result != null) {
+      setState(() {
+        maxNumber = result;
+      });
+    }
+  }
+
   void onCreateRandomNumbers() {
     final r = Random();
     Set<int> newRandomNumbers = {};
 
     while (newRandomNumbers.length != 3) {
-      final newNumber = r.nextInt(1000);
+      final newNumber = r.nextInt(maxNumber);
       newRandomNumbers.add(newNumber);
     }
 
@@ -120,7 +141,10 @@ class _Body extends StatelessWidget {
 }
 
 class _Header extends StatelessWidget {
-  const _Header({
+  VoidCallback onPressed;
+
+  _Header({
+    required this.onPressed,
     super.key,
   });
 
@@ -138,15 +162,7 @@ class _Header extends StatelessWidget {
           ),
         ),
         IconButton(
-          onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (BuildContext context) {
-                  return SettingScreen();
-                },
-              ),
-            );
-          },
+          onPressed: onPressed,
           icon: Icon(
             Icons.settings,
             color: RED_COLOR,

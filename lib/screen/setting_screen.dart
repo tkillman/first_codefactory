@@ -44,7 +44,9 @@ class _SettingScreenState extends State<SettingScreen> {
               },
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pop<int>(maxNumber.toInt());
+              },
               style: ElevatedButton.styleFrom(
                 primary: RED_COLOR,
               ),
