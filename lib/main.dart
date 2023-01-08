@@ -27,6 +27,9 @@ import 'package:first_codefactory/screen/constConstructor.dart';
 // 랜덤숫자 생성기
 import 'package:first_codefactory/screen/randomNumber.dart';
 
+//버튼종류
+import 'package:first_codefactory/screen/buttonKind.dart';
+
 void main() {
   runApp(
     MaterialApp(
@@ -54,7 +57,7 @@ void main() {
           ),
         ),
       ),
-      home: RandomNumber(),
+      home: ButtonKind(),
     ),
   );
 }
