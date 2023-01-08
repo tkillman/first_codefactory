@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:first_codefactory/screen/setting_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../const/color.dart';
@@ -136,9 +137,20 @@ class _Header extends StatelessWidget {
             fontWeight: FontWeight.w700,
           ),
         ),
-        Icon(
-          Icons.settings,
-          color: RED_COLOR,
+        IconButton(
+          onPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (BuildContext context) {
+                  return SettingScreen();
+                },
+              ),
+            );
+          },
+          icon: Icon(
+            Icons.settings,
+            color: RED_COLOR,
+          ),
         )
       ],
     );
