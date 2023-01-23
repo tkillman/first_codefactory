@@ -1,3 +1,4 @@
+import 'package:first_codefactory/route/RouteApp.dart';
 import 'package:flutter/material.dart';
 
 // StatelessWidget 기초
@@ -30,6 +31,9 @@ import 'package:first_codefactory/screen/randomNumber.dart';
 //버튼종류
 import 'package:first_codefactory/screen/buttonKind.dart';
 
+// router
+import 'package:first_codefactory/route/main_layout.dart';
+
 void main() {
   runApp(
     MaterialApp(
@@ -57,7 +61,7 @@ void main() {
           ),
         ),
       ),
-      home: ButtonKind(),
+      home: RouteApp(),
     ),
   );
 }

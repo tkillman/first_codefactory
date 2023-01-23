@@ -117,3 +117,14 @@ git 명령어 : git clone https://github.com/flutter/flutter.git -b stable
     ```
 
 -   ## [프로젝트] [★★☆☆☆] 쓸데없이 이쁜 랜덤숫자 생성기
+
+-   ## [이론] Buttons
+
+    buttonKind.dart
+
+-   ## [이론] Navigation
+
+    > ###
+    >
+    > 공부할 환경 세팅하기
+    > Argument 전달하기
